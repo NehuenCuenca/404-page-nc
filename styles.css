@@ -61,7 +61,33 @@ main {
 #image {
     height: 20rem;
     width: auto;
+    animation: windMove 5s ease 1s infinite normal forwards;
 }
+
+@keyframes windMove {
+	0%, 10%, 70%, 100% {}
+    20% {
+        transform: skew(9deg);
+        -webkit-transform: skew(9deg);
+        -moz-transform: skew(9deg);    
+    }
+    30%{
+        transform: skew(5deg);
+        -webkit-transform: skew(5deg);
+        -moz-transform: skew(5deg);
+    }
+    40%{
+        transform: skew(11deg);
+        -webkit-transform: skew(11deg);
+        -moz-transform: skew(11deg);
+    }
+	60% {
+        transform: skew(0deg);
+        -webkit-transform: skew(0deg);
+        -moz-transform: skew(0deg);
+    }
+}
+
 
 h1 { margin: 0; }
 
@@ -89,6 +115,8 @@ button#back-btn {
     padding: 1rem .5rem;
     border-radius: 1px;
     text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-position: under;
     font-size: 1rem;
     background-color: #333333;
     color: white;
